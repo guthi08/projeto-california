@@ -33,6 +33,10 @@ class CombinedAttributesAdder(BaseEstimator, TransformerMixin):
         else:
             return np.c_[X, rooms_per_household, population_per_household]
 
+
+import __main__
+setattr(__main__, "CombinedAttributesAdder", CombinedAttributesAdder)
+
 # --- 2. CARREGAR O MODELO ---
 # O arquivo .pkl deve estar na mesma pasta que este arquivo .py
 pipeline = joblib.load('modelo_california.pkl')
